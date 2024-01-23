@@ -2467,15 +2467,15 @@ class CheckOutFormController extends ChangeNotifier {
       "template": "FleetRTAEmail",
       "subject": "Issues_Form_Notification_RTA_CV",
       "mailto": 
-      url.contains(domain) ?
-      "control.rta@cbluna.com" :
+      url.contains(domainTest) ?
+      "control.rta@cbluna.com" : //cuenta para hacer pruebas
       user.company.target?.company == "CRY" ? 
       "cry@cbluna.com" : 
       user.company.target?.company == "ODE" ?
       "ode@cbluna.com" : 
       user.company.target?.company == "SMI" ?
       "smi@cbluna.com" : 
-      "control.rta@cbluna.com",
+      "control.rta@cbluna.com", //cuenta para hacer pruebas
       "variables": [
         {"name": "company", "value": "${user.company.target?.company}"},
         {"name": "plates", "value": "${user.vehicle.target?.licensePlates}"},
